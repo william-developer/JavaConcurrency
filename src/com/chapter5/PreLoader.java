@@ -4,6 +4,8 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
+import common.LaunderThrowable;
+
 public class PreLoader {
 	private final FutureTask<ProductInfo> future = new FutureTask(new Callable<ProductInfo>(){
 		public ProductInfo call(){
@@ -31,12 +33,4 @@ public class PreLoader {
 }
 class DataLoadException extends Exception { }
 interface ProductInfo {
-}
-class LaunderThrowable extends Exception{
-
-	public static Exception launderThrowable(Throwable cause) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
 }
